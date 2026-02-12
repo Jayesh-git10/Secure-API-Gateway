@@ -26,7 +26,7 @@ A scalable REST API with JWT Authentication and a React Dashboard.
 3. **Seed Data**
    Create initial Admin and User accounts + sample tasks.
    ```bash
-   npx tsx scripts/seed.ts
+   npm run seed
    ```
 
 4. **Run Server**
