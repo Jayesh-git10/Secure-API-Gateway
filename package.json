@@ -4,13 +4,16 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "tsx script/build.ts",
-    "start": "NODE_ENV=production node dist/index.cjs",
-    "check": "tsc",
+    "dev": "NODE_ENV=development tsx server/index.js",
+    "build": "tsx script/build.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
     "@radix-ui/react-accordion": "^1.2.4",
@@ -55,6 +58,7 @@
     "express": "^5.0.1",
     "express-session": "^1.18.1",
     "framer-motion": "^11.18.2",
+    "glob": "^13.0.2",
     "input-otp": "^1.4.2",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.453.0",

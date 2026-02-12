@@ -1,0 +1,38 @@
+function _extends() {return _extends = Object.assign ? Object.assign.bind() : function (n) {for (var e = 1; e < arguments.length; e++) {var t = arguments[e];for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);}return n;}, _extends.apply(null, arguments);}import * as React from "react";
+import { cva } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  // Whitespace-nowrap: Badges should never wrap.
+  "whitespace-nowrap inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2" +
+  " hover-elevate ",
+  {
+    variants: {
+      variant: {
+        default:
+        "border-transparent bg-primary text-primary-foreground shadow-xs",
+        secondary: "border-transparent bg-secondary text-secondary-foreground",
+        destructive:
+        "border-transparent bg-destructive text-destructive-foreground shadow-xs",
+
+        outline: " border [border-color:var(--badge-outline)] shadow-xs"
+      }
+    },
+    defaultVariants: {
+      variant: "default"
+    }
+  }
+);
+
+
+
+
+
+function Badge({ className, variant, ...props }) {
+  return (/*#__PURE__*/
+    React.createElement("div", _extends({ className: cn(badgeVariants({ variant }), className) }, props)));
+
+}
+
+export { Badge, badgeVariants };
